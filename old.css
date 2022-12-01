@@ -7,9 +7,7 @@ Made by funH4xx0r <3
 :root {
     min-height: 100%;
     overflow: hidden;
-    display: block;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    display:block;
 }
 
 body {
@@ -23,7 +21,6 @@ body {
 #content {
     display: flex;
 }
-span{display:inline-block;}
 
 header {
     display: flex;
@@ -43,23 +40,33 @@ header {
     text-decoration: none;
 }
 
-.typewriting {
+/*.header__link-home{
+    animation-delay:5s;
+}*/
+
+.typewriter {
+    /*height:8em;/*
+    position: relative;
+    top: 50%;
+    width: calc(var(--len)*1em);
+    /*margin: 0 auto;*/
     border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
-    text-align: left;
-    white-space: nowrap;
+    /*text-align: center;*/
     overflow: hidden;
-    height:1.2em;
+    white-space: nowrap;
+    /*transform: translateY(-50%);*/
+    height: 1.2em;
 }
 
 /* Animation */
-.typewriting-anim {
-    animation-delay:5s;
-    animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both, /* name duration steps delay and something else */
-        blinkTextCursor 500ms steps(var(--len)) 1s /*calc((var(--len)*.5) + 5)*/infinite normal;
+.typewriter-anim {
+    animation-delay: calc(var(--time)*1s),0s;
+    animation: _typewriter calc(var(--len)*0.1s) steps(var(--len)) 1s 1 normal both,
+        _blinkTextCursor 500ms steps(var(--len)) calc((var(--len)*.5) + 5) normal;
 }
 
-@keyframes typewriter {
+@keyframes _typewriter {
     from {
         width: 0;
     }
@@ -67,9 +74,11 @@ header {
     to {
         width: calc(var(--len)*0.545em);
     }
+
+    /* some weird coefficient I found suitable */
 }
 
-@keyframes blinkTextCursor {
+@keyframes _blinkTextCursor {
     from {
         border-right-color: rgba(255, 255, 255, .75);
     }
