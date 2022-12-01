@@ -8,8 +8,6 @@ Made by funH4xx0r <3
     min-height: 100%;
     overflow: hidden;
     display: block;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
 }
 
 body {
@@ -22,10 +20,6 @@ body {
 
 #content {
     display: flex;
-}
-
-span {
-    display: inline-block;
 }
 
 header {
@@ -52,17 +46,13 @@ header {
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
-    height: 1.2em;
+    height:1.2em;
 }
 
 /* Animation */
 .typewriting-anim {
-    animation-delay: 5s;
-    animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both,
-        /* name duration steps delay and something else */
-        blinkTextCursor 500ms steps(var(--len)) 1s
-        /*calc((var(--len)*.5) + 5)*/
-        infinite normal;
+    animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both, /* name duration steps delay and something else */
+        blinkTextCursor 500ms steps(var(--len)) 1s /*calc((var(--len)*.5) + 5)*/ infinite normal;
 }
 
 @keyframes typewriter {
