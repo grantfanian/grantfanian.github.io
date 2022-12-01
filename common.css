@@ -60,7 +60,7 @@ header {
         /* name duration steps delay and something else */
         blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s)
         /*calc((var(--len)*.5) + 5)*/
-        infinite normal;
+        calc(5 + (var(--len)*.2)) forwards normal;
 }
 
 @keyframes typewriter {
