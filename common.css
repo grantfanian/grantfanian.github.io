@@ -26,13 +26,16 @@ p {
     margin: 0;
 }
 
-header {
+#leftpane {
     display: flex;
     flex-direction: column;
     flex-basis: 20em;
     color: rgba(255, 255, 255, .75);
 }
 
+#rightpane {
+    margin-left: 10vw;
+}
 
 .header__link {
     color: rgba(255, 255, 255, .75);
