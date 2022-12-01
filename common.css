@@ -17,6 +17,29 @@ body {
     background-color: rgb(25, 25, 25);
 }
 
+#content {
+    display: flex;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20em;
+    color: rgba(255, 255, 255, .75);
+}
+
+
+.header__link {
+    color: rgba(255, 255, 255, .75);
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    margin: 0 0 1em 0;
+}
+
+.header__link-name {
+    text-decoration-line:none;
+}
+
 .typewriting {
     border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
@@ -29,7 +52,7 @@ body {
 .typewriting-anim {
     animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both,
         /* name duration steps delay and something else */
-        blinkTextCursor 500ms steps(var(--len)) 1s
+        blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s)
         /*calc((var(--len)*.5) + 5)*/
         infinite normal;
 }
