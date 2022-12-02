@@ -29,13 +29,24 @@ p {
 #leftpane {
     display: flex;
     flex-direction: column;
+    justify-items:flex-end;
     flex-basis: 20em;
     color: rgba(255, 255, 255, .75);
+}
+
+#leftpane__links {
+    display: flex;
+    flex-direction: column;
+}
+
+#leftpane__about {
+    display: flex;
 }
 
 #rightpane {
     margin-left: 10vw;
 }
+
 
 .header__link {
     color: rgba(255, 255, 255, .75);
@@ -78,10 +89,12 @@ p {
 
 @keyframes blinkTextCursor {
     from {
+        border-right: 2px solid rgba(255, 255, 255, .75);
         border-right-color: rgba(255, 255, 255, .75);
     }
 
     to {
         border-right-color: transparent;
+        border-right: none;
     }
 }
