@@ -4,7 +4,11 @@ Made by funH4xx0r <3
 */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
+/*
+I hope relative measurements help it being displayed on phones, but it isn't great at all.
+*/
 :root {
+    --page: "home";
     min-height: 100%;
     overflow: hidden;
 }
@@ -19,6 +23,7 @@ body {
 
 #content {
     display: flex;
+    height: 95vh;
 }
 
 p {
@@ -29,24 +34,19 @@ p {
 #leftpane {
     display: flex;
     flex-direction: column;
-    justify-items:flex-end;
-    flex-basis: 20em;
+    align-self: stretch;
+    justify-content: space-between;
+    flex-basis: 15em;
+    /* makes space for one more char :) */
+    flex-wrap: nowrap;
     color: rgba(255, 255, 255, .75);
 }
 
 #leftpane__links {
     display: flex;
     flex-direction: column;
+    row-gap: 0.6em;
 }
-
-#leftpane__about {
-    display: flex;
-}
-
-#rightpane {
-    margin-left: 10vw;
-}
-
 
 .header__link {
     color: rgba(255, 255, 255, .75);
@@ -59,6 +59,32 @@ p {
     color: rgba(255, 255, 255, .75);
     text-decoration-line: none;
 }
+
+#leftpane__about {
+    display: flex;
+}
+
+#rightpane {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    margin-left: 10vw;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+#rightpane>div[id]:target~#home {
+    /* ~ is "sibling" operator*/
+    display: none;
+    overflow: hidden;
+}
+
+#home,
+#rightpane>div[id]:target {
+    display: block;
+    overflow-y: scroll;
+}
+
 
 .typewriting {
     border-right: 2px solid rgba(255, 255, 255, .75);
@@ -74,7 +100,8 @@ p {
         /* name duration steps delay and something else */
         blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s)
         /*calc((var(--len)*.5) + 5)*/
-        calc(5 + (var(--len)*.2)) forwards normal;
+        calc(0 + (var(--len)*0.2)) forwards normal;
+        /* number of steps affects end state when animation is done forwads, but I'm not yet cool enough to master it. */
 }
 
 @keyframes typewriter {
