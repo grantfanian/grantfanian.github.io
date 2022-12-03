@@ -72,16 +72,19 @@ p {
     overflow-y: hidden;
     flex-grow: 1;
 }
-#rightpane>div[id]{
-    flex-grow:1;
+
+#rightpane>div[id] {
+    flex-grow: 1;
 }
+
 #rightpane>div[id]:not(:target) {
     /* ~ is "sibling" operator*/
     display: none;
     overflow-y: hidden;
 }
 
-#home,#rightpane>div[id]:target {
+#home,
+#rightpane>div[id]:target {
     display: block;
     overflow-y: auto;
 }
@@ -102,7 +105,7 @@ p {
         blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s)
         /*calc((var(--len)*.5) + 5)*/
         calc(0 + (var(--len)*0.2)) forwards normal;
-        /* number of steps affects end state when animation is done forwads, but I'm not yet cool enough to master it. */
+    /* number of steps affects end state when animation is done forwads, but I'm not yet cool enough to master it. */
 }
 
 @keyframes typewriter {
