@@ -69,20 +69,21 @@ p {
     flex-direction: column;
     width: inherit;
     margin-left: 10vw;
-    overflow-y: scroll;
+    overflow-y: hidden;
     flex-grow: 1;
 }
-
-#rightpane>div[id]:target~#home {
+#rightpane>div[id]{
+    flex-grow:1;
+}
+#rightpane>div[id]:not(:target) {
     /* ~ is "sibling" operator*/
     display: none;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
-#home,
-#rightpane>div[id]:target {
+#home,#rightpane>div[id]:target {
     display: block;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
