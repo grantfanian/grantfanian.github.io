@@ -15,7 +15,7 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
 
 body {
     /*height: calc(100vh - 7em);*/
-    padding: 2vh 0cm 2vw 1vw;
+    margin: 2rem 0 2vw 1vw;
     color: rgba(255, 255, 255, .75);
     font-family: 'Anonymous Pro', monospace;
     background-color: rgb(25, 25, 25);
@@ -37,7 +37,7 @@ p {
     align-self: stretch;
     justify-content: space-between;
     flex-basis: 15em;
-    /* makes space for one more char :) */
+    /* enough space for one more char */
     flex-wrap: nowrap;
     color: rgba(255, 255, 255, .75);
 }
@@ -48,6 +48,18 @@ p {
     row-gap: 0.6em;
 }
 
+#leftpane__links>:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.header__link--name>p {
+    margin: 0;
+}
+
+.header__link--name {
+    margin: 0 0 1em 0;
+}
+
 .header__link {
     color: rgba(255, 255, 255, .75);
     text-decoration-line: underline;
@@ -55,7 +67,7 @@ p {
     margin: 0 0 1em 0;
 }
 
-.header__link-name {
+.header__link--name {
     color: rgba(255, 255, 255, .75);
     text-decoration-line: none;
 }
@@ -80,6 +92,7 @@ p {
 #rightpane>div[id]:not(:target) {
     /* ~ is "sibling" operator*/
     display: none;
+    visibility: hidden;
     overflow-y: hidden;
 }
 
@@ -99,13 +112,15 @@ p {
 }
 
 /* Animation */
-.typewriting-anim {
+.typewriting__anim {
+    /* speed is 10 chars per second */
     animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both,
         /* name duration steps delay and something else */
         blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s)
         /*calc((var(--len)*.5) + 5)*/
         calc(0 + (var(--len)*0.2)) forwards normal;
-    /* number of steps affects end state when animation is done forwads, but I'm not yet cool enough to master it. */
+    /* the end state depends on number of steps (shown above) and is right only on even len with that "forwards" thing
+but I'm not yet cool enough to master it. */
 }
 
 @keyframes typewriter {
