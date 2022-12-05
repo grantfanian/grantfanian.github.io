@@ -8,14 +8,13 @@ Made by funH4xx0r <3
 I hope relative measurements help it being displayed on phones, but it isn't great at all.
 */
 :root {
-    --page: "home";
     min-height: 100%;
     overflow: hidden;
 }
 
 body {
     /*height: calc(100vh - 7em);*/
-    margin: 2rem 0 2vw 1vw;
+    margin: 0 0 2vw 1vw;
     color: rgba(255, 255, 255, .75);
     font-family: 'Anonymous Pro', monospace;
     background-color: rgb(25, 25, 25);
@@ -23,7 +22,7 @@ body {
 
 #content {
     display: flex;
-    height: 95vh;
+    height: 100vh;
 }
 
 p {
@@ -32,6 +31,7 @@ p {
 }
 
 #leftpane {
+    margin: 2% 0 0 0;
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -70,6 +70,7 @@ p {
 .header__link--name {
     color: rgba(255, 255, 255, .75);
     text-decoration-line: none;
+    display: inline;
 }
 
 #leftpane__about {
@@ -86,21 +87,19 @@ p {
 }
 
 #rightpane>div[id] {
+    margin:0 2% 0 0;
+    /* ~ is "sibling" operator*/
+    visibility: hidden;
+    overflow-y: hidden;
+    position: relative;
+    max-height: 0;
     flex-grow: 1;
 }
 
-
-#rightpane>div[id],
-#rightpane>div[id]:target~#home {
-    /* ~ is "sibling" operator*/
-    display: none;
-    overflow-y: hidden;
-}
-
-#home,
 #rightpane>div[id]:target {
-    display: block;
+    visibility: visible;
     overflow-y: auto;
+    max-height: max-content;
 }
 
 
@@ -116,17 +115,18 @@ p {
 .typewriting__anim {
     --shf: 4.9406564584124654e-324;
     /* https://stackoverflow.com/a/64921523 */
-    /* black incompatiable magic */
-    /* I got no JS tho :) */
-    /* speed is 10 chars per second */
-    animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both,
+    /* damn CSS is so capable */
+    /* speed is 12.5 chars per second */
+    animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
         /* name duration steps delay and something else */
-        blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s) calc(3 + (var(--len)*0.2)*var(--shf)/var(--shf)) forwards normal;
-    -moz-animation: typewriter calc(var(--len)*0.1s) steps(var(--len)) calc(var(--delay)*1s) 1 normal both,
+        blinkTextCursor 400ms steps(var(--len)) calc(var(--delay)*0.5s)
+        /* won't work if float isn't 64 bit but it's pretty common */
+        calc(3 + (var(--len)*0.2)*var(--shf)/var(--shf)) forwards normal;
+    -moz-animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
         /* name duration steps delay and something else */
-        blinkTextCursor 500ms steps(var(--len)) calc(var(--delay)*1s)
+        blinkTextCursor 400ms steps(var(--len)) calc(var(--delay)*0.5s)
         /*calc((var(--len)*.5) + 5)*/
-        round(calc(1 + (var(--len)*0.2)), 1) forwards normal;
+        round(calc(3 + (var(--len)*0.2)), 1) forwards normal;
     /* round is very unsupported */
     /* tested on firefox nightly */
     /* the end state depends on number of steps (shown above) and works great only when
