@@ -1,8 +1,9 @@
-/* Google Fonts 
-Font is under FLOSS SIL Open Font License. 
+/*
 Made by funH4xx0r <3
 */
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+@import url("/common.css");
+
 
 /*
 I hope relative measurements help it being displayed on phones, but it isn't great at all.
@@ -12,13 +13,6 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
     overflow: hidden;
 }
 
-body {
-    /*height: calc(100vh - 7em);*/
-    margin: 0 0 2vw 1vw;
-    color: rgba(255, 255, 255, .75);
-    font-family: 'Anonymous Pro', monospace;
-    background-color: rgb(25, 25, 25);
-}
 
 #content {
     display: flex;
@@ -87,7 +81,7 @@ p {
 }
 
 #rightpane>div[id] {
-    margin:0 2% 0 0;
+    margin: 2vh 0 0 0;
     /* ~ is "sibling" operator*/
     visibility: hidden;
     overflow-y: hidden;
@@ -125,7 +119,6 @@ p {
     -moz-animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
         /* name duration steps delay and something else */
         blinkTextCursor 400ms steps(var(--len)) calc(var(--delay)*0.5s)
-        /*calc((var(--len)*.5) + 5)*/
         round(calc(3 + (var(--len)*0.2)), 1) forwards normal;
     /* round is very unsupported */
     /* tested on firefox nightly */
