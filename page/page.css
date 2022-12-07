@@ -107,18 +107,22 @@ p {
 
 /* Animation */
 .typewriting__anim {
+    animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
+        /* name duration steps delay and something else */
+        blinkTextCursor 400ms steps(var(--len)) calc(var(--delay)*0.5s)
+        /* you get no workaround :skull: */
+        calc(3 + (var(--len)*0.2)) forwards normal;
     --shf: 4.9406564584124654e-324;
     /* https://stackoverflow.com/a/64921523 */
     /* damn CSS is so capable */
     /* speed is 12.5 chars per second */
     animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
-        /* name duration steps delay and something else */
         blinkTextCursor 400ms steps(var(--len)) calc(var(--delay)*0.5s)
         /* won't work if float isn't 64 bit but it's pretty common */
         calc(3 + (var(--len)*0.2)*var(--shf)/var(--shf)) forwards normal;
     -moz-animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
-        /* name duration steps delay and something else */
         blinkTextCursor 400ms steps(var(--len)) calc(var(--delay)*0.5s)
+        /* firefox supports that */
         round(calc(3 + (var(--len)*0.2)), 1) forwards normal;
     /* round is very unsupported */
     /* tested on firefox nightly */
