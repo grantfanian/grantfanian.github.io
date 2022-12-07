@@ -9,14 +9,16 @@ Made by funH4xx0r <3
 I hope relative measurements help it being displayed on phones, but it isn't great at all.
 */
 :root {
-    min-height: 100%;
+    height: 100%;
+    position: fixed;
     overflow: hidden;
 }
 
 
 #content {
     display: flex;
-    height: 100vh;
+    height: 97vh;
+    /* 8% of uglyness :) for the address bar */
 }
 
 p {
@@ -25,12 +27,12 @@ p {
 }
 
 #leftpane {
-    margin: 2% 0 0 0;
+    margin: 5% 0 0 0;
+    width: 20em;
     display: flex;
     flex-direction: column;
     align-self: stretch;
     justify-content: space-between;
-    flex-basis: 15em;
     /* enough space for one more char */
     flex-wrap: nowrap;
     color: rgba(255, 255, 255, .75);
@@ -69,15 +71,15 @@ p {
 
 #leftpane__about {
     display: flex;
+    margin-bottom: 5vh;
 }
 
 #rightpane {
     display: flex;
     flex-direction: column;
-    width: inherit;
-    margin-left: 10vw;
     overflow-y: hidden;
-    flex-grow: 1;
+    position:relative;
+    width:calc(98vw - 20em); /* 2vw body's margin adjustment */
 }
 
 #rightpane>div[id] {
