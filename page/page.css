@@ -18,7 +18,7 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
 #content {
     display: flex;
     height: 97vh;
-    /* 8% of uglyness :) for the address bar */
+    /* 3% of uglyness :) for the address bar */
 }
 
 p {
@@ -33,7 +33,6 @@ p {
     flex-direction: column;
     align-self: stretch;
     justify-content: space-between;
-    /* enough space for one more char */
     flex-wrap: nowrap;
     color: rgba(255, 255, 255, .75);
 }
@@ -66,32 +65,42 @@ p {
 .header__link--name {
     color: rgba(255, 255, 255, .75);
     text-decoration-line: none;
-    display: inline;
+    display: flex;
+    /* umm I don't particularly like doing everything using flex
+    it's cool and flexy tho */
+    flex-direction: column;
+    width: 9em;
+    /* hardcoded :skull: */
 }
 
 #leftpane__about {
     display: flex;
     margin-bottom: 5vh;
 }
-.gh-logo{
-    width:5em;
-    height:5em;
+
+.gh-logo {
+    width: 5em;
+    height: 5em;
 }
 
 #rightpane {
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    position:relative;
-    width:calc(98vw - 20em); /* 2vw body's margin adjustment */
+    position: relative;
+    width: calc(98vw - 20em);
+    /* 2vw body's margin adjustment */
+}
+
+#rightpane>div[id]:first-child {
+    margin: 2vh 0 0 0;
 }
 
 #rightpane>div[id] {
-    margin: 2vh 0 0 0;
-    /* ~ is "sibling" operator*/
     visibility: hidden;
     overflow-y: hidden;
     position: relative;
+    /* it probably breaks many things yet makes it work */
     max-height: 0;
     flex-grow: 1;
 }
