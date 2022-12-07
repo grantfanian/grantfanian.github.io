@@ -73,6 +73,10 @@ p {
     display: flex;
     margin-bottom: 5vh;
 }
+.gh-logo{
+    width:5em;
+    height:5em;
+}
 
 #rightpane {
     display: flex;
