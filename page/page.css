@@ -13,6 +13,9 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
     position: fixed;
     overflow: hidden;
 }
+code {
+    white-space: nowrap;
+}
 
 .syntax-set {
     color: #7777ff;
