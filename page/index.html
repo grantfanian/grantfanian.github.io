@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="page.css">
     <title>My first page</title>
     <!-- the only thing I couldn't do in CSS -->
-    <script>document.location.hash = "#home"</script>
+    <script>if (document.loaction.hash == "") { document.location.hash = "#home" }</script>
 
 </head>
 
@@ -52,9 +52,9 @@
                         </p>
                         <h2>Description</h2>
                         <p>Everything on this page is done using CSS, except one JS line:
-                            <code><span class="syntax syntax-set">document.location.hash = </span><span class="syntax syntax-string">'#home'</span></code>
+                            <code>if (<span class="syntax syntax-set">document.loaction.hash == </span><span class="syntax syntax-string">&quot;&quot;</span>) { <span class="syntax syntax-set">document.location.hash = </span><span class="syntax syntax-string">&quot;#home&quot;</span> }</code>
                             <br />
-                            This line switches page to this on load.<br />
+                            This line switches to home page if current is unset.<br />
                             <br />All the code is written by myself from docs, without copypasting :), and tested on
                             different platforms and screens.
                         </p>
@@ -78,10 +78,12 @@
                         <p>Most of my projects will remain unknown.
                             Most I have abandoned just because of losing the mood,
                             <br />but the experience gain from them is very high.
-                            <br />and for the others, I either lost them, because I liked to switch OSes, PCs and Linux
+                            <br />and about some other projects... I either lost them, because I liked to switch OSes,
+                            PCs and Linux
                             distros <i>"the hard
                                 way"</i>,
                             <br /> or don't want to disclose them, because I think they're miserable or may be illegal.
+                            <br /> The ones I've published still deserve some attention though.
                         </p>
                     </section>
                     <header>
@@ -90,8 +92,14 @@
                     <section>
                         <p>
                         <ul>
-                            <li><a href="https://github.com/grantfanian/grantfanian.github.io" class="link">This page, of course</a>
+                            <li><a href="https://github.com/grantfanian/grantfanian.github.io" class="link">This page,
+                                    of course</a>
                             </li>
+                            <li><a href="https://github.com/grantfanian/jutsuload" class="link">jutsulad</a>, a downloading tool for
+                                russian anime site jut.su
+                                <br />(abandoned because yt-dlp can do everything it does already, and better)
+                            </li>
+                            <li><a href="https://github.com/grantfanian/jutsuload" class="link">jutsulad</a></li>
                         </ul>
                         </p>
                     </section>

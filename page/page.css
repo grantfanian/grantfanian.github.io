@@ -88,6 +88,10 @@ p {
     /* hardcoded :skull: */
 }
 
+a[href="#home"]>p {
+    margin-bottom: 0;
+}
+
 #leftpane__about {
     display: flex;
     margin-bottom: 5vh;
