@@ -15,6 +15,7 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
 }
 code {
     white-space: nowrap;
+    background-color: grey;
 }
 
 .syntax-set {
