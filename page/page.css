@@ -14,6 +14,13 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
     overflow: hidden;
 }
 
+.syntax-set {
+    color: #7777ff;
+}
+
+.syntax-string {
+    color: #00ffff;
+}
 
 #content {
     display: flex;
@@ -111,7 +118,11 @@ p {
     max-height: max-content;
 }
 
+article {
+    font-size: 130%;
+}
 
+/* Animation */
 .typewriting {
     border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
@@ -120,7 +131,7 @@ p {
     height: 1.2em;
 }
 
-/* Animation */
+
 .typewriting__anim {
     animation: typewriter calc(var(--len)*0.08s) steps(var(--len)) calc(var(--delay)*0.5s) 1 normal both,
         /* name duration steps delay and something else */
