@@ -92,6 +92,10 @@ a[href="#home"]>p {
     margin-bottom: 0;
 }
 
+section>p {
+    text-indent: 1em;
+}
+
 #leftpane__about {
     display: flex;
     margin-bottom: 5vh;
