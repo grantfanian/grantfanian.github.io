@@ -14,6 +14,11 @@ I hope relative measurements help it being displayed on phones, but it isn't gre
     overflow: hidden;
 }
 
+#copyright {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
 code {
     white-space: nowrap;
     background-color: #5050507f;
