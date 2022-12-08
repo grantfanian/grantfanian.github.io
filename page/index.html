@@ -15,14 +15,14 @@
         <div id="leftpane">
             <div id="leftpane__links">
                 <!-- blinking cursor doesn't disappear if --len is uhh you should test it -->
-                <a href="#home" class="header__link--name">
+                <a href="#home" class="link--name">
                     <p class="typewriting typewriting__anim" style="--len:7;--delay:1;">Grant's</p>
-                    <p class="typewriting typewriting__anim header__link" style="--len:9;--delay:2.3;">home page</p>
+                    <p class="typewriting typewriting__anim link" style="--len:9;--delay:2.3;">home page</p>
                 </a>
-                <a href="#projects" class="typewriting typewriting__anim header__link" style="--len:11;--delay:4;">
+                <a href="#projects" class="typewriting typewriting__anim link" style="--len:11;--delay:4;">
                     <p>My projects</p>
                 </a>
-                <a href="#about" class="typewriting typewriting__anim header__link" style="--len:8;--delay:4;">
+                <a href="#about" class="typewriting typewriting__anim link" style="--len:8;--delay:4;">
                     <p>About me</p>
                 </a>
             </div>
@@ -45,59 +45,63 @@
                         <h1>Home page</h1>
                     </header>
                     <section>
+                        <p>This page is my first serious web thing.
+                            <br />This is not my first project, though: take a look at
+                            <a href="#projects" class="link">my projects</a> or my
+                            <a href="https://github.com/grantfanian" class="link">github profile</a>.
+                        </p>
                         <h2>Description</h2>
                         <p>Everything on this page is done using CSS, except one JS line:
-                            <br />
                             <code><span class="syntax syntax-set">document.location.hash = </span><span class="syntax syntax-string">'#home'</span></code>
                             <br />
-                            which switches page to this on load.<br />
+                            This line switches page to this on load.<br />
+                            <br />All the code is written by myself from docs, without copypasting :), and tested on
+                            different platforms and screens.
                         </p>
-                        <p>The page is thoroughly tested on mobile and it works pretty well. Source code with commit history is on 
-                            <a class="header__link" href="https://github.com/grantfanian/grantfanian.github.io">GitHub</a>.</p>
+                        <br>
+                        <p>The page also works on mobile.<br />
+                            Source code with commit history is
+                            <a class="link" href="https://github.com/grantfanian/grantfanian.github.io"> on GitHub</a>.
+                        </p>
+                        <p>This page is somewhat inspired by <a href="//:fosny.eu" class="link">fosny.eu</a>.
+                            <br />The design is simple and functional.
+                        </p>
                     </section>
                 </article>
             </div>
             <div id="projects">
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
-                <h2>!iH</h2>
+                <article>
+                    <header>
+                        <h1>My projects</h1>
+                    </header>
+                    <section>
+                        <p>My name is Grant Fanian.</p>
+                        <p>I like engineering. I like tinkering with computers, programming, electronics.
+                            <br />Many other things I found interesting, unfortunately, aren't available to me. <br />
+                            Eventually, I want to try out everything about engineering, from idea to a
+                            consumer&sol;application-ready product.
+                        </p>
+                        <p>I don't play games, mostly just watch youtube about coding and stuff, or actually do
+                            something.</p>
+                    </section>
+                </article>
             </div>
             <div id="about">
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
-                <h1>hi!</h1>
+                <article>
+                    <header>
+                        <h1>About me</h1>
+                    </header>
+                    <section>
+                        <p>My name is Grant Fanian.</p>
+                        <p>I like engineering. I like tinkering with computers, programming, electronics.
+                            <br />Many other things I found interesting, unfortunately, aren't available to me. <br />
+                            Eventually, I want to try out everything about engineering, from idea to a
+                            consumer&sol;application-ready product.
+                        </p>
+                        <p>I don't play games, mostly just watch youtube about coding and stuff, or actually do
+                            something.</p>
+                    </section>
+                </article>
             </div>
         </div>
     </div>
